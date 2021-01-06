@@ -1,7 +1,8 @@
 hello:
 	echo "this is my first make command"
 install:
-	echo "this will later be a pip install"
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
 lint:
 	pylint --disable=R,C,E1120 hello.py
 test:
